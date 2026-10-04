@@ -397,28 +397,32 @@ img {
 /* Quick Search Bar inside Hero */
 .hero-booking-bar {
   margin-top: 35px;
-  background: rgba(23, 22, 20, 0.88);
+  background: rgba(23, 22, 20, 0.92);
   backdrop-filter: blur(12px);
-  border: 1px solid #ffffff22;
-  padding: 20px;
-  max-width: 950px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 24px;
+  width: 100%;
+  max-width: 920px;
+  border-radius: 4px;
 }
 
 .booking-strip {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) 140px;
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr) 140px;
+  gap: 15px;
   align-items: end;
+  width: 100%;
 }
 
 .strip-field {
   display: flex;
   flex-direction: column;
   text-align: left;
+  width: 100%;
 }
 
 .strip-field label {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -428,12 +432,48 @@ img {
 
 .strip-input {
   background: #171614;
-  border: 1px solid #ffffff22;
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: #fff;
-  padding: 10px 12px;
+  padding: 12px 14px;
   font-family: Manrope, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   outline: none;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 2px;
+}
+
+.strip-input:focus {
+  border-color: #B68A57;
+}
+
+.booking-strip .btn {
+  height: 43px;
+  width: 100%;
+}
+
+/* Responsive Breakpoints for Quick Booking Strip */
+@media (max-width: 850px) {
+  .booking-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .booking-strip .btn {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 550px) {
+  .booking-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .booking-strip .btn {
+    grid-column: span 1;
+  }
+  .hero-booking-bar {
+    padding: 16px;
+  }
 }
 
 /* ----- Editorial Section Styling ----- */
@@ -760,7 +800,7 @@ img {
   filter: grayscale(1);
 }
 
-/* ----- Modal ----- */
+/* ----- Reservation Modal Popup (Matching Screenshot Exactly) ----- */
 .lightbox-modal {
   position: fixed;
   z-index: 300;
@@ -778,23 +818,60 @@ img {
 }
 
 .modal-inner {
-  background: #171614;
+  background: #141311;
   color: #fff;
   border: 1px solid #B68A57;
   padding: 40px;
-  width: min(520px, 100%);
+  width: min(500px, 100%);
   position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
 }
 
 .modal-close-btn {
   position: absolute;
-  top: 15px;
+  top: 18px;
   right: 20px;
   background: none;
   border: none;
   color: #fff;
-  font-size: 28px;
+  font-size: 26px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-close-btn:hover {
+  color: #B68A57;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.modal-field label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #B68A57;
+}
+
+.modal-input {
+  background: #1c1b18;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  padding: 12px 14px;
+  font-family: Manrope, sans-serif;
+  font-size: 13px;
+  outline: none;
+  width: 100%;
+}
+
+.modal-input:focus {
+  border-color: #B68A57;
 }
 
 /* ----- Footer ----- */

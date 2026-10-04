@@ -143,7 +143,8 @@ document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 const modal = document.querySelector("#bookingModal");
 const closeBtn = document.querySelector("#modalCloseBtn");
 const resRoomSelect = document.querySelector("#resRoom");
-const form = document.querySelector("#reservationForm");
+const reservationForm = document.querySelector("#reservationForm");
+const heroBookingForm = document.querySelector("#heroBookingForm");
 
 document.querySelectorAll(".open-modal-btn").forEach((btn) => {
   btn.onclick = (e) => {
@@ -164,17 +165,33 @@ if (closeBtn && modal) {
   };
 }
 
-if (form) {
-  form.onsubmit = (e) => {
+// Direct WhatsApp Booking Handler for Hero Quick Search
+if (heroBookingForm) {
+  heroBookingForm.onsubmit = (e) => {
     e.preventDefault();
-    const name = document.querySelector("#resName").value;
-    const phone = document.querySelector("#resPhone").value;
-    const room = document.querySelector("#resRoom").value;
-    const date = document.querySelector("#resDate").value;
+    const checkin = document.querySelector("#heroCheckin")?.value || "Not specified";
+    const checkout = document.querySelector("#heroCheckout")?.value || "Not specified";
+    const room = document.querySelector("#heroRoom")?.value || "Deluxe Double Room";
 
-    const msg = `Hello The Yak Motel Skardu! I would like to book a stay:\n- Name: ${name}\n- Phone: ${phone}\n- Room: ${room}\n- Date: ${date}`;
-    window.open(`https://wa.me/923554244965?text=${encodeURIComponent(msg)}`, "_blank");
-    modal.classList.remove("open");
+    const text = `Hello The Yak Motel Skardu! I would like to book a stay:\n- Room Category: ${room}\n- Check-in Date: ${checkin}\n- Check-out Date: ${checkout}`;
+    const whatsappUrl = `https://wa.me/923554244965?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+}
+
+// Direct WhatsApp Booking Handler for Modal Form
+if (reservationForm) {
+  reservationForm.onsubmit = (e) => {
+    e.preventDefault();
+    const name = document.querySelector("#resName")?.value || "";
+    const phone = document.querySelector("#resPhone")?.value || "";
+    const room = document.querySelector("#resRoom")?.value || "";
+    const date = document.querySelector("#resDate")?.value || "";
+
+    const text = `Hello The Yak Motel Skardu! I want to confirm a room reservation:\n- Name: ${name}\n- Phone: ${phone}\n- Room Category: ${room}\n- Check-in Date: ${date}`;
+    const whatsappUrl = `https://wa.me/923554244965?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, "_blank");
+    if (modal) modal.classList.remove("open");
   };
 }
 
