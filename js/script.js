@@ -95,20 +95,38 @@ function renderCafeMenu(active = "coffee") {
 
 renderCafeMenu();
 
-// Mobile Navigation
+// Mobile Navigation Toggle
 const toggleBtn = document.querySelector("#menuToggleBtn");
 const mobileMenu = document.querySelector("#mobileMenuDrawer");
+const mobileCloseBtn = document.querySelector("#mobileCloseBtn");
+
+function closeMobileMenu() {
+  if (mobileMenu) {
+    mobileMenu.classList.remove("open");
+    mobileMenu.setAttribute("aria-hidden", "true");
+  }
+  if (toggleBtn) {
+    toggleBtn.classList.remove("active");
+    toggleBtn.setAttribute("aria-expanded", "false");
+  }
+}
 
 if (toggleBtn && mobileMenu) {
   toggleBtn.onclick = () => {
-    const open = mobileMenu.classList.toggle("open");
-    mobileMenu.setAttribute("aria-hidden", !open);
+    const isOpen = mobileMenu.classList.toggle("open");
+    toggleBtn.classList.toggle("active", isOpen);
+    toggleBtn.setAttribute("aria-expanded", isOpen);
+    mobileMenu.setAttribute("aria-hidden", !isOpen);
   };
-
-  document.querySelectorAll(".mobile-links a, #mobileMenuDrawer .btn").forEach((a) => {
-    a.onclick = () => mobileMenu.classList.remove("open");
-  });
 }
+
+if (mobileCloseBtn) {
+  mobileCloseBtn.onclick = closeMobileMenu;
+}
+
+document.querySelectorAll(".mobile-links a, #mobileMenuDrawer .btn").forEach((a) => {
+  a.onclick = closeMobileMenu;
+});
 
 // Scroll Reveal
 const observer = new IntersectionObserver(
@@ -130,6 +148,7 @@ const form = document.querySelector("#reservationForm");
 document.querySelectorAll(".open-modal-btn").forEach((btn) => {
   btn.onclick = (e) => {
     e.preventDefault();
+    closeMobileMenu();
     const room = btn.getAttribute("data-room");
     if (resRoomSelect && room) {
       resRoomSelect.value = room;

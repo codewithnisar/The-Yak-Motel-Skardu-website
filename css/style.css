@@ -165,8 +165,9 @@ img {
 }
 
 .btn.light {
-  background: #fff;
-  color: #171614;
+  background: #ffffff;
+  color: #171614 !important;
+  font-weight: 700;
 }
 
 .btn.dark {
@@ -176,17 +177,21 @@ img {
 
 .btn.gold {
   background: #B68A57;
-  color: #fff;
+  color: #171614 !important;
+  font-weight: 700;
 }
 
 .btn.outline {
-  border-color: #ffffff66;
-  color: #fff;
+  background: #ffffff;
+  color: #171614 !important;
+  font-weight: 700;
+  border-color: #ffffff;
 }
 
 .btn.outline:hover {
-  background: #ffffff12;
-  border-color: #fff;
+  background: #B68A57;
+  color: #171614 !important;
+  border-color: #B68A57;
 }
 
 .btn.outline-dark {
@@ -199,32 +204,69 @@ img {
   color: #fff;
 }
 
+/* Room Card Button Specifics */
+.room-card .btn {
+  background: #ffffff !important;
+  color: #171614 !important;
+  font-weight: 700;
+  border: 1px solid #ffffff;
+  width: 100%;
+}
+
+.room-card .btn:hover {
+  background: #B68A57 !important;
+  color: #171614 !important;
+  border-color: #B68A57;
+}
+
+/* ----- Hamburger Menu Toggle Button ----- */
 .menu-toggle {
   display: none;
   background: none;
-  border: 1px solid #ffffff44;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   width: 44px;
   height: 44px;
-  color: #fff;
-  font-size: 18px;
+  padding: 12px 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Mobile Menu Drawer */
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+/* ----- Mobile Menu Drawer ----- */
 .mobile-menu {
   position: fixed;
-  z-index: 40;
+  z-index: 250;
   inset: 0;
   background: #171614;
   color: #fff;
-  padding: 130px 25px 35px;
+  padding: 30px 25px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-10px);
-  transition: 0.35s;
+  transform: translateY(-15px);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow-y: auto;
 }
 
 .mobile-menu.open {
@@ -233,11 +275,55 @@ img {
   transform: none;
 }
 
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 20px;
+}
+
+.mobile-close-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.mobile-close-btn:hover {
+  border-color: #B68A57;
+  color: #B68A57;
+}
+
+.mobile-links {
+  margin: 30px 0;
+}
+
 .mobile-links a {
   display: block;
-  border-bottom: 1px solid #ffffff22;
-  padding: 15px 0;
-  font: 45px "Cormorant Garamond", serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 0;
+  font: 38px "Cormorant Garamond", serif;
+  color: #ffffffd9;
+  transition: 0.3s;
+}
+
+.mobile-links a:hover {
+  color: #B68A57;
+  padding-left: 10px;
+}
+
+.mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* ----- Hero Section ----- */
@@ -677,7 +763,7 @@ img {
 /* ----- Modal ----- */
 .lightbox-modal {
   position: fixed;
-  z-index: 200;
+  z-index: 300;
   inset: 0;
   background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(8px);
@@ -783,7 +869,7 @@ footer {
 /* Responsive */
 @media (max-width: 900px) {
   .desktop-links { display: none; }
-  .menu-toggle { display: block; }
+  .menu-toggle { display: flex; }
   .top-nav-inner { flex-direction: column; text-align: center; gap: 4px; }
   .grid-2col { grid-template-columns: 1fr; gap: 55px; }
   .rooms-container, .amenities-editorial { grid-template-columns: 1fr; }
