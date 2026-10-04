@@ -1,0 +1,8 @@
+# The Grind Cafe & Eatery — robots.txt
+# https://thegrindcafe.com (update domain when live)
+
+User-agent: *
+Allow: /
+Disallow: /assets/icons/
+
+Sitemap: https://thegrindcafe.com/sitemap.xml

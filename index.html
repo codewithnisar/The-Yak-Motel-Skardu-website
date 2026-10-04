@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F5F1E8">
+  <meta name="description" content="Discover The Yak Motel Skardu & The Grind Cafe — Luxury accommodation, authentic hospitality, mountain views and fresh dining in Skardu, Gilgit-Baltistan.">
+  <meta name="author" content="The Yak Motel Skardu">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Yak Motel Skardu | Luxury Motel & The Grind Cafe">
+  <meta property="og:description" content="Good food. Slow moments. Mountain air. Experience authentic Skardu hospitality at The Yak Motel and The Grind Cafe.">
+  <meta property="og:url" content="https://theyakmotel.com">
+  <meta property="og:image" content="assets/images/hero.jpg">
+
+  <title>The Yak Motel Skardu | Luxury Motel & The Grind Cafe in Skardu</title>
+
+  <!-- Favicon & Manifest -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "The Yak Motel Skardu",
+    "description": "A peaceful motel and eatery in Skardu offering luxury rooms, mountain views, and authentic hospitality.",
+    "url": "https://theyakmotel.com",
+    "telephone": "+923554244965",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hameed Garh Road, Opposite PTDC Motel",
+      "addressLocality": "Skardu",
+      "addressRegion": "Gilgit-Baltistan",
+      "postalCode": "16100",
+      "addressCountry": "PK"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header Wrapper (Top Announcement Bar + Navigation Bar) -->
+  <header class="site-header">
+    <!-- Top Utility / Announcement Bar -->
+    <div class="top-nav-bar">
+      <div class="container top-nav-inner">
+        <div class="top-address">
+          <span>Hameed Garh Road, Opposite PTDC Motel, Skardu · Gilgit-Baltistan</span>
+        </div>
+        <div class="top-contact">
+          <span>Call: <a href="tel:+923554244965">+92 355 4244965</a></span>
+          <span class="sep">|</span>
+          <span><a href="https://www.instagram.com/thegrindcafeandeatery" target="_blank" rel="noreferrer">Instagram ↗</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Nav -->
+    <nav class="nav">
+      <a class="logo-group" href="#top">
+        <span class="logo">THE YAK MOTEL</span>
+        <span class="logo-sub">Skardu · & The Grind Cafe</span>
+      </a>
+
+      <div class="desktop-links">
+        <a href="#story">Story</a>
+        <a href="#rooms">Our Rooms</a>
+        <a href="#cafe">The Grind Cafe</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#visit">Visit</a>
+        <a href="#booking" class="btn light open-modal-btn">Book Stay ↗</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggleBtn" aria-label="Open menu"><i>☰</i></button>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenuDrawer" aria-hidden="true">
+    <div class="mobile-links">
+      <a href="#story">Story</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#cafe">The Grind Cafe</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a href="#booking" class="btn light open-modal-btn">Book Stay ↗</a>
+  </div>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="assets/images/hero.jpg" alt="The Yak Motel Skardu Mountain View">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow white">A Peaceful Motel & Eatery in Skardu</p>
+        <h1>THE YAK MOTEL<br>SKARDU</h1>
+        <p class="hero-copy">Good food. Slow moments. Mountain air.<br>Enjoy Your Stay in Skardu.</p>
+
+        <div class="actions">
+          <a href="#rooms" class="btn light">Explore Rooms ↗</a>
+          <a href="#visit" class="btn outline">Visit Us</a>
+        </div>
+
+        <!-- Quick Booking Search Strip -->
+        <div class="hero-booking-bar">
+          <form class="booking-strip open-modal-btn" onsubmit="return false;">
+            <div class="strip-field">
+              <label>Check-in</label>
+              <input type="date" class="strip-input" required>
+            </div>
+            <div class="strip-field">
+              <label>Check-out</label>
+              <input type="date" class="strip-input" required>
+            </div>
+            <div class="strip-field">
+              <label>Room Category</label>
+              <select class="strip-input">
+                <option>Deluxe Double Room</option>
+                <option>Deluxe Twin Room</option>
+                <option>Executive Suite</option>
+              </select>
+            </div>
+            <button type="submit" class="btn gold">Book Now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: About The Yak Motel -->
+    <section id="story" class="section">
+      <div class="container grid-2col reveal">
+        <div>
+          <p class="eyebrow gold">The feeling</p>
+          <h2>About The Yak Motel</h2>
+          <p class="lead">Located in the heart of Skardu, The Yak Motel offers a warm and welcoming stay surrounded by breathtaking mountain views. Whether you are traveling for leisure or business, we provide top-notch hospitality and comfort for every guest.</p>
+          <p class="note">CLIENT VERIFIED STORY — Experience-focused hospitality in Gilgit-Baltistan.</p>
+        </div>
+
+        <div class="photo reveal">
+          <img src="assets/images/about.jpg" alt="The Yak Motel Atmosphere Skardu" loading="lazy">
+          <span>THE YAK MOTEL SKARDU</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: OUR ROOMS -->
+    <section id="rooms" class="dark-section">
+      <div class="container">
+        <div class="heading reveal">
+          <div>
+            <p class="eyebrow white">Sanctuary in the mountains</p>
+            <h2>OUR ROOMS</h2>
+          </div>
+          <p>Explore our cozy and comfortable rooms designed for your relaxation after a day of adventure in Skardu.</p>
+        </div>
+
+        <div class="rooms-container">
+          <!-- Room 1 -->
+          <article class="room-card reveal">
+            <div class="room-card-photo">
+              <img src="assets/images/room1.jpg" alt="Deluxe Double Room" loading="lazy">
+              <span class="room-price-tag">PKR 8,500 / night</span>
+            </div>
+            <div class="room-card-content">
+              <small>01 · Deluxe Comfort</small>
+              <h3>Deluxe Double Room</h3>
+              <p>Features a queen-size bed, warm mountain decor, attached luxury bath, and wide window view of Karakoram peaks.</p>
+              <button class="btn outline open-modal-btn" data-room="Deluxe Double Room">Reserve Room ↗</button>
+            </div>
+          </article>
+
+          <!-- Room 2 -->
+          <article class="room-card reveal">
+            <div class="room-card-photo">
+              <img src="assets/images/room2.jpg" alt="Deluxe Twin Room" loading="lazy">
+              <span class="room-price-tag">PKR 9,000 / night</span>
+            </div>
+            <div class="room-card-content">
+              <small>02 · Twin Sharing</small>
+              <h3>Deluxe Twin Room</h3>
+              <p>Ideal for travel companions or friends. Two plush single beds, work desk, 24/7 hot water, and mountain breeze.</p>
+              <button class="btn outline open-modal-btn" data-room="Deluxe Twin Room">Reserve Room ↗</button>
+            </div>
+          </article>
+
+          <!-- Room 3 -->
+          <article class="room-card reveal">
+            <div class="room-card-photo">
+              <img src="assets/images/room1.jpg" alt="Executive Suite" loading="lazy">
+              <span class="room-price-tag">PKR 14,000 / night</span>
+            </div>
+            <div class="room-card-content">
+              <small>03 · Family & Group</small>
+              <h3>Executive Family Suite</h3>
+              <p>Spacious luxury suite with multiple beds, sitting area, panoramic mountain views, and room service.</p>
+              <button class="btn outline open-modal-btn" data-room="Executive Family Suite">Reserve Room ↗</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: The Grind Cafe and Eatery Skardu -->
+    <section id="cafe" class="section">
+      <div class="container grid-2col reveal" style="align-items: flex-start;">
+        <div>
+          <p class="eyebrow gold">In-house eatery</p>
+          <h2>"The Grind Cafe and Eatery Skardu"</h2>
+          <p class="lead">Experience delicious dining & fresh coffee under one roof. Browse our menu selection below for hot espresso brews, Pakistani delights, and slow-crafted desserts.</p>
+          <p class="note">LOCATION: Inside The Yak Motel · Open daily from breakfast to late dinner.</p>
+        </div>
+
+        <div>
+          <div id="cafeTabs" class="tabs"></div>
+          <div id="cafeContent" class="menu-content"></div>
+          <div style="margin-top: 25px;">
+            <a href="tel:+923554244965" class="btn dark">Order Food / Reserve Table ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Experience The Difference With Us (Amenities) -->
+    <section id="amenities" class="dark-section">
+      <div class="container">
+        <div class="heading reveal">
+          <div>
+            <p class="eyebrow white">Guest experience</p>
+            <h2>Experience The Difference With Us</h2>
+          </div>
+          <p>We provide thoughtful amenities so you can focus entirely on enjoying your mountain journey.</p>
+        </div>
+
+        <div class="amenities-editorial">
+          <div class="amenity-item reveal">
+            <span class="amenity-num">01 · PARKING</span>
+            <h3>Car Parking</h3>
+            <p>Spacious, private, and secure parking area for all guest cars, SUVs, and tour jeeps.</p>
+          </div>
+
+          <div class="amenity-item reveal">
+            <span class="amenity-num">02 · SERVICE</span>
+            <h3>Room Service</h3>
+            <p>Prompt 24/7 in-room dining and service delivered straight to your door with a smile.</p>
+          </div>
+
+          <div class="amenity-item reveal">
+            <span class="amenity-num">03 · CONNECT</span>
+            <h3>Free Wi-Fi</h3>
+            <p>High-speed wireless internet access across all rooms and The Grind Cafe space.</p>
+          </div>
+
+          <div class="amenity-item reveal">
+            <span class="amenity-num">04 · EXPLORE</span>
+            <h3>Tour Guidance</h3>
+            <p>Local sightseeing guidance and jeep arrangements for Deosai Plains, Shangrila & Katpana Desert.</p>
+          </div>
+
+          <div class="amenity-item reveal">
+            <span class="amenity-num">05 · ATMOSPHERE</span>
+            <h3>Family Friendly</h3>
+            <p>Safe, peaceful environment specially curated for families, couples, and group travelers.</p>
+          </div>
+
+          <div class="amenity-item reveal">
+            <span class="amenity-num">06 · DESK</span>
+            <h3>24/7 Front Desk</h3>
+            <p>Round-the-clock reception team ready to answer your questions and assist anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Why We Are The Best Motel In Skardu -->
+    <section id="why-us" class="section">
+      <div class="container reveal">
+        <p class="eyebrow gold">Excellence in Skardu</p>
+        <h2>Why We Are The Best Motel In Skardu</h2>
+
+        <div class="why-editorial">
+          <div class="why-card">
+            <h4>Prime & Accessible Location</h4>
+            <p>Situated directly on Hameed Garh Road opposite PTDC Motel — conveniently close to Skardu Airport, main bazaar, and Karakoram highway routes.</p>
+          </div>
+
+          <div class="why-card">
+            <h4>Authentic Skardu Hospitality</h4>
+            <p>Warm Balti welcome combined with attentive professional service ensuring maximum guest comfort.</p>
+          </div>
+
+          <div class="why-card">
+            <h4>Panoramic Mountain Views</h4>
+            <p>Wake up to breathtaking morning sunrises over Karakoram mountain peaks right from your room window.</p>
+          </div>
+
+          <div class="why-card">
+            <h4>Cleanliness & Warm Heating</h4>
+            <p>Spotless sanitized rooms, fresh linens, and reliable hot water showers after cold mountain treks.</p>
+          </div>
+
+          <div class="why-card">
+            <h4>In-House Dining Advantage</h4>
+            <p>Savor fresh coffee, breakfast, and delicious Karahis at The Grind Cafe without stepping outside the motel.</p>
+          </div>
+
+          <div class="why-card">
+            <h4>Affordable Luxury Rates</h4>
+            <p>Unbeatable value offering premium comfort and amenities at budget-friendly pricing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Visit & Location -->
+    <section id="visit" class="section" style="background: #ebe5da;">
+      <div class="container grid-2col visit-grid reveal">
+        <div>
+          <p class="eyebrow gold">Find us</p>
+          <h2>Meet Us in Skardu.</h2>
+          <p class="lead">Hameed Garh Road, opposite PTDC Motel — a straightforward place to find The Yak Motel while you are in Skardu.</p>
+
+          <div class="contact-box">
+            <strong>The Yak Motel Skardu</strong>
+            <span>Hameed Garh Road, Opposite PTDC Motel<br>Skardu, Gilgit-Baltistan 16100</span>
+            <a href="tel:+923554244965">Phone: +92 355 4244965</a>
+            <a href="https://www.instagram.com/thegrindcafeandeatery" target="_blank" rel="noreferrer">Instagram: @thegrindcafeandeatery ↗</a>
+          </div>
+
+          <div class="actions" style="margin-top: 25px;">
+            <a class="btn dark" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=The%20Grind%20Cafe%20%26%20Eatery%2C%20Hameed%20Garh%20Road%2C%20Skardu">Get Directions ↗</a>
+            <a class="btn outline-dark" href="tel:+923554244965">Call Motel</a>
+          </div>
+        </div>
+
+        <div class="map-frame">
+          <iframe title="The Yak Motel Skardu Location" src="https://www.google.com/maps?q=The%20Grind%20Cafe%20%26%20Eatery%2C%20Hameed%20Garh%20Road%2C%20Skardu&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reservation Modal -->
+  <div id="bookingModal" class="lightbox-modal">
+    <div class="modal-inner">
+      <button class="modal-close-btn" id="modalCloseBtn">×</button>
+      <p class="eyebrow gold">Direct Reservation</p>
+      <h3 style="font: 36px 'Cormorant Garamond', serif; margin: 10px 0 20px;">Book Your Stay</h3>
+
+      <form id="reservationForm" style="display: flex; flex-direction: column; gap: 15px;">
+        <div>
+          <label style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: #B68A57;">Your Name</label>
+          <input type="text" id="resName" class="strip-input" style="width: 100%; margin-top: 4px;" required placeholder="Full Name">
+        </div>
+
+        <div>
+          <label style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: #B68A57;">Phone / WhatsApp</label>
+          <input type="tel" id="resPhone" class="strip-input" style="width: 100%; margin-top: 4px;" required placeholder="+92 3XX XXXXXXX">
+        </div>
+
+        <div>
+          <label style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: #B68A57;">Room Category</label>
+          <select id="resRoom" class="strip-input" style="width: 100%; margin-top: 4px;">
+            <option value="Deluxe Double Room">Deluxe Double Room</option>
+            <option value="Deluxe Twin Room">Deluxe Twin Room</option>
+            <option value="Executive Family Suite">Executive Family Suite</option>
+          </select>
+        </div>
+
+        <div>
+          <label style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: #B68A57;">Check-in Date</label>
+          <input type="date" id="resDate" class="strip-input" style="width: 100%; margin-top: 4px;" required>
+        </div>
+
+        <button type="submit" class="btn gold" style="margin-top: 10px; width: 100%;">Confirm via WhatsApp ↗</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">THE YAK MOTEL</div>
+        <small>SKARDU · & THE GRIND CAFE</small>
+        <p style="margin-top: 15px;">A peaceful motel & eatery in Skardu offering warm mountain hospitality, comfortable rooms, and fresh dining.</p>
+      </div>
+
+      <div>
+        <p class="eyebrow white">Visit Us</p>
+        <p>Hameed Garh Road<br>Opposite PTDC Motel<br>Skardu, Gilgit-Baltistan</p>
+        <a href="tel:+923554244965">+92 355 4244965</a>
+      </div>
+
+      <div>
+        <p class="eyebrow white">Explore</p>
+        <a href="#story">Story</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#cafe">The Grind Cafe</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#why-us">Why Us</a>
+        <a href="https://www.instagram.com/thegrindcafeandeatery" target="_blank" rel="noreferrer">Instagram ↗</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> The Yak Motel Skardu & The Grind Cafe</span>
+      <span>Good food. Slow moments. Mountain air.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "The Yak Motel Skardu & The Grind Cafe",
+  "short_name": "The Yak Motel",
+  "description": "Luxury mountain motel & eatery in Skardu, Gilgit-Baltistan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#141311",
+  "theme_color": "#C69A59",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

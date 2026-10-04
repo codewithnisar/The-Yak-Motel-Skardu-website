@@ -1,0 +1,11 @@
+/* TEAM */
+
+Developer: The Grind Cafe Dev Team
+Contact: info [at] thegrindcafe.com
+Location: Skardu, Gilgit-Baltistan, Pakistan
+
+/* SITE */
+
+Last update: 2026-10-04
+Standards: HTML5, CSS3, Vanilla JS
+Software: VS Code, Git
