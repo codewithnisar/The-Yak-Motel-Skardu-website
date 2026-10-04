@@ -139,13 +139,15 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-// Modal Booking Popup
+// Modal Booking Popup Elements
 const modal = document.querySelector("#bookingModal");
 const closeBtn = document.querySelector("#modalCloseBtn");
 const resRoomSelect = document.querySelector("#resRoom");
+const resDateInput = document.querySelector("#resDate");
 const reservationForm = document.querySelector("#reservationForm");
 const heroBookingForm = document.querySelector("#heroBookingForm");
 
+// Open Modal Triggers
 document.querySelectorAll(".open-modal-btn").forEach((btn) => {
   btn.onclick = (e) => {
     e.preventDefault();
@@ -158,6 +160,7 @@ document.querySelectorAll(".open-modal-btn").forEach((btn) => {
   };
 });
 
+// Close Modal Triggers
 if (closeBtn && modal) {
   closeBtn.onclick = () => modal.classList.remove("open");
   modal.onclick = (e) => {
@@ -165,21 +168,21 @@ if (closeBtn && modal) {
   };
 }
 
-// Direct WhatsApp Booking Handler for Hero Quick Search
+// Hero Quick Search -> Pre-fills Date & Room, THEN opens the "Book Your Stay" Modal
 if (heroBookingForm) {
   heroBookingForm.onsubmit = (e) => {
     e.preventDefault();
-    const checkin = document.querySelector("#heroCheckin")?.value || "Not specified";
-    const checkout = document.querySelector("#heroCheckout")?.value || "Not specified";
-    const room = document.querySelector("#heroRoom")?.value || "Deluxe Double Room";
+    const checkin = document.querySelector("#heroCheckin")?.value;
+    const room = document.querySelector("#heroRoom")?.value;
 
-    const text = `Hello The Yak Motel Skardu! I would like to book a stay:\n- Room Category: ${room}\n- Check-in Date: ${checkin}\n- Check-out Date: ${checkout}`;
-    const whatsappUrl = `https://wa.me/923554244965?text=${encodeURIComponent(text)}`;
-    window.open(whatsappUrl, "_blank");
+    if (resRoomSelect && room) resRoomSelect.value = room;
+    if (resDateInput && checkin) resDateInput.value = checkin;
+
+    if (modal) modal.classList.add("open");
   };
 }
 
-// Direct WhatsApp Booking Handler for Modal Form
+// Modal Submission -> Sends pre-filled message directly to WhatsApp (+92 355 4244965)
 if (reservationForm) {
   reservationForm.onsubmit = (e) => {
     e.preventDefault();
